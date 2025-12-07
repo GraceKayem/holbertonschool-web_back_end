@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Write a type-annotated function sum_mixed_list which takes a list of integers
-and floats and returns their sum as a float.
+"""Write a type-annotated function sum_mixed_list which takes a list of
+integers and floats and returns their sum as a float.
 """
 
 import typing

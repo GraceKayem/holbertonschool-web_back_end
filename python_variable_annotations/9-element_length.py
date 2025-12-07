@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Annotate the function's parameters and return values with the appropriate types."""
+"""Annotate the function's parameters and return values with the appropriate
+types.
+"""
 
 import typing
 
