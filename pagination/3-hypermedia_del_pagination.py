@@ -33,12 +33,12 @@ class Server:
             }
         return self.__indexed_dataset
 
-    def get_hyper_index(self, index: int = 0,
-                        page_size: int = 10) -> Dict:
-        """
-        Return pagination data with index resilience.
-        """
+    def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
+        """Return pagination data with index resilience."""
         dataset = self.indexed_dataset()
+        
+        if index is None:
+            index = 0
 
         assert isinstance(index, int) and 0 <= index < len(dataset)
 

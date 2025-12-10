@@ -9,8 +9,10 @@ index_range = __import__('0-simple_helper_function').index_range
 
 
 class Server:
-    """Implement a get_hyper method that takes the same arguments (and defaults)
-    as get_page and returns a dictionary containing the following key-value pairs.
+    """Server class to implement a get_hyper method.
+
+    Takes the same arguments (and defaults) as get_page and returns a
+    dictionary containing the following key-value pairs.
     """
     DATA_FILE = "Popular_Baby_Names.csv"
 
