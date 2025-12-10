@@ -36,7 +36,7 @@ class Server:
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """Return pagination data with index resilience."""
         dataset = self.indexed_dataset()
-        
+
         if index is None:
             index = 0
 
