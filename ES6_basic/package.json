@@ -1,0 +1,23 @@
+{
+  "name": "ES6_basic",
+  "version": "1.0.0",
+  "description": "directory readme",
+  "main": ".eslintrc.js",
+  "dependencies": {
+    "babel-jest": "^30.2.0",
+    "eslint": "^9.39.2",
+    "jest": "^30.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/node": "^7.28.0",
+    "@babel/preset-env": "^7.28.5"
+  },
+  "scripts": {
+  "lint": "eslint .",
+  "dev": "babel-node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
