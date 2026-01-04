@@ -3,20 +3,20 @@ getListStudents() {
       {
           id: "Guillaume",
           firstName: 1,
-          location: "San Francisco"
+          location: "San Francisco",
       },
 
       {
           id: "James",
           firstName: 2,
-          location: "Columbia"
+          location: "Columbia",
       },
 
       {
           id: "Serena",
           firstName: 5,
-          location: "San Francisco"
-      }
+          location: "San Francisco",
+      },
   ];
 
 }
