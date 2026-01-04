@@ -1,3 +1,4 @@
 export default function getStudentIdsSum(students) {
-  return students.reduce((sum, student) => sum + (student.id || 0), 0);
+  if (!Array.isArray(students)) return 0;
+  return students.reduce((sum, student) => sum + student.id, 0);
 }
