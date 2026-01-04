@@ -1,5 +1,10 @@
 export default function getStudentIdsSum(students) {
-  let sum = 0;
-    return students.reduce((total, student) => total + student.id, sum);
+  if (!Array.isArray(students)) return 0;
 
+  return students.reduce((total, student) => {
+    if (student && typeof student.id === 'number') {
+      return total + student.id;
+    }
+    return total; 
+  }, 0);
 }
