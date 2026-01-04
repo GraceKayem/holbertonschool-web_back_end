@@ -1,5 +1,8 @@
-import getListStudentIds from "./1-get_list_student_ids.js";
-import getListStudents from "./0-get_list_students.js";
+export default function getListStudentIds(students) {
 
-console.log(getListStudentIds("hello"));
-console.log(getListStudentIds(getListStudents()));
+  if (Array.isArray(students)) {
+    return students.map((student) => student.id);
+  } 
+  
+  return [];
+}
