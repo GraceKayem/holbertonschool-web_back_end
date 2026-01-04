@@ -6,7 +6,7 @@ export default function getListStudents() {
       location: 'San Francisco',
     },
     {
-      d: 2,
+      id: 2,
       firstName: 'James',
       location: 'Columbia',
     },
