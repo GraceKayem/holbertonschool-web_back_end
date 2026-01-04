@@ -1,4 +1,4 @@
-getListStudents() {
+export default function getListStudents() {
   return [
       {
           id: "Guillaume",
