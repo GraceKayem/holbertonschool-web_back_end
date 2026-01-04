@@ -1,9 +1,22 @@
 getListStudents() {
-  const values = [
-    [id, firstName, location],
-    ["Guillaume", 1, "San Francisco"],
-    ["James", 2, "Columbia"],
-    ["Serena", 5, "San Francisco"]
+  return [
+      {
+          id: "Guillaume",
+          firstName: 1,
+          location: "San Francisco"
+      },
+
+      {
+          id: "James",
+          firstName: 2,
+          location: "Columbia"
+      },
+
+      {
+          id: "Serena",
+          firstName: 5,
+          location: "San Francisco"
+      }
   ];
 
 }
