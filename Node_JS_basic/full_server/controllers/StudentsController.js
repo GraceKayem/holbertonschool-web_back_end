@@ -1,43 +1,43 @@
-import readDatabase from "../utils.js";
+import readDatabase from '../utils'
 
 class StudentsController {
   static async getAllStudents(req, res) {
-    const dbFile = process.argv[2];
+    const dbFile = process.argv[2]
 
     try {
-      const data = await readDatabase(dbFile);
+      const data = await readDatabase(dbFile)
       const fields = Object.keys(data).sort((a, b) =>
         a.toLowerCase().localeCompare(b.toLowerCase())
-      );
+      )
 
-      let responseText = "This is the list of our students\n";
+      let responseText = 'This is the list of our students\n'
       fields.forEach((field) => {
-        const list = data[field].join(", ");
-        responseText += `Number of students in ${field}: ${data[field].length}. List: ${list}\n`;
-      });
+        const list = data[field].join(', ')
+        responseText += `Number of students in ${field}: ${data[field].length}. List: ${list}\n`
+      })
 
-      return res.status(200).send(responseText.trim());
+      return res.status(200).send(responseText.trim())
     } catch (err) {
-      return res.status(500).send("Cannot load the database");
+      return res.status(500).send('Cannot load the database')
     }
   }
 
   static async getAllStudentsByMajor(req, res) {
-    const dbFile = process.argv[2];
-    const { major } = req.params;
+    const dbFile = process.argv[2]
+    const { major } = req.params
 
-    if (!["CS", "SWE"].includes(major)) {
-      return res.status(500).send("Major parameter must be CS or SWE");
+    if (!['CS', 'SWE'].includes(major)) {
+      return res.status(500).send('Major parameter must be CS or SWE')
     }
 
     try {
-      const data = await readDatabase(dbFile);
-      const list = data[major] || [];
-      return res.status(200).send(`List: ${list.join(", ")}`);
+      const data = await readDatabase(dbFile)
+      const list = data[major] || []
+      return res.status(200).send(`List: ${list.join(', ')}`)
     } catch (err) {
-      return res.status(500).send("Cannot load the database");
+      return res.status(500).send('Cannot load the database')
     }
   }
 }
 
-export default StudentsController;
+export default StudentsController
