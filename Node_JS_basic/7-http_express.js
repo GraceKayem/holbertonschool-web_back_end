@@ -40,7 +40,7 @@ app.get('/students', (req, res) => {
 
     Object.keys(fields).forEach((field) => {
       res.write(
-        `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}\n`
+        `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}\n`,
       );
     });
 
