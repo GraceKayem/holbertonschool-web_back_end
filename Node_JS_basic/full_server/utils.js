@@ -1,27 +1,20 @@
-import fs from 'fs';
+import fs from "fs";
 
-const readDatabase = (filePath) => new Promise((resolve, reject) => {
-  fs.readFile(filePath, 'utf8', (err, data) => {
+const readDatabase = (path) => new Promise((resolve, reject) => {
+  fs.readFile(path, "utf-8", (err, data) => {
     if (err) {
       reject(err);
       return;
     }
 
-    const lines = data.trim().split('\n');
-    const headers = lines[0].split(',');
-    const fieldIndex = headers.indexOf('field');
-    const firstNameIndex = headers.indexOf('firstname');
-
+    const lines = data.trim().split("\n");
     const result = {};
 
-    for (let i = 1; i < lines.length; i += 1) {
-      const cols = lines[i].split(',');
-      const field = cols[fieldIndex];
-      const firstname = cols[firstNameIndex];
-
+    lines.slice(1).forEach((line) => {
+      const [firstname, , , field] = line.split(",");
       if (!result[field]) result[field] = [];
       result[field].push(firstname);
-    }
+    });
 
     resolve(result);
   });
