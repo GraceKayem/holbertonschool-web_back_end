@@ -1,7 +1,7 @@
 import readDatabase from '../utils.js';
 
 class StudentsController {
-  // This is where your getAllStudents method goes
+
   static async getAllStudents(req, res) {
     const dbFile = process.argv[2];
 
@@ -23,7 +23,6 @@ class StudentsController {
     }
   }
 
-  // You will also add getAllStudentsByMajor here later
 }
 
 export default StudentsController;
