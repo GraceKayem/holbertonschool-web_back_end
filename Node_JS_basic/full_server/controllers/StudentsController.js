@@ -6,9 +6,7 @@ export default class StudentsController {
 
     try {
       const data = await readDatabase(dbFile);
-      const fields = Object.keys(data).sort((a, b) =>
-        a.toLowerCase().localeCompare(b.toLowerCase())
-      );
+      const fields = Object.keys(data).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
       let responseText = 'This is the list of our students\n';
       fields.forEach((field) => {
